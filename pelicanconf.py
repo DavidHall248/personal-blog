@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 AUTHOR = 'David Hall'
 SITENAME = "David Hall's Blog"
 SITEURL = ""
@@ -34,7 +33,6 @@ DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
-=======
 AUTHOR = 'David Hall'
 SITENAME = "David Hall's Blog"
 SITEURL = ""
@@ -70,4 +68,3 @@ DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
->>>>>>> e4a86eaa796e8f89898c4c1ad6dfdf697630d5d4

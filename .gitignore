@@ -1,2 +1,4 @@
+# .gitignore
 output/
 .venv/
+pelican-themes/
