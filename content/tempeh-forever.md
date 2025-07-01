@@ -1,6 +1,5 @@
 Title: Tempeh Forever
 Date: 2024-07-01
-Summary: Tiny little Tempeh summary
 
 Welcome to my site! I'm a developer who loves Pelican.
 
