@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # This file is only used if you use `make publish` or
 # explicitly specify it as your config file.
 
@@ -21,7 +20,6 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # DISQUS_SITENAME = ""
 # GOOGLE_ANALYTICS = ""
-=======
 # This file is only used if you use `make publish` or
 # explicitly specify it as your config file.
 
@@ -44,4 +42,3 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # DISQUS_SITENAME = ""
 # GOOGLE_ANALYTICS = ""
->>>>>>> e4a86eaa796e8f89898c4c1ad6dfdf697630d5d4

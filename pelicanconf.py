@@ -1,6 +1,6 @@
 AUTHOR = 'David Hall'
-SITENAME = "David Hall's Blog"
-SITEURL = ""
+SITENAME = 'David Hall's Blog'
+SITEURL = 'https://davidhall.dev'
 
 PATH = "content"
 
@@ -23,21 +23,21 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
 LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
+    ("work", SITEURL+"/category/work.html"),
+    ("projects", SITEURL+"/category/projects.html"),
+#    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
+#    ("You can modify those links in your config file", "#"),
 )
 
 # Social widget
-SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)
+#SOCIAL = (
+#    ("You can add links in your config file", "#"),
+#   ("Another social link", "#"),
+#)
 
 DEFAULT_PAGINATION = 5
 
-#ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-#ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{slug}/index.html'
 PAGE_URL = 'pages/{slug}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'

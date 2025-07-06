@@ -1,7 +1,8 @@
 Title: Tempeh Forever
 Date: 2024-07-01
-
-Welcome to my site! I'm a developer who loves Pelican.
+Slug: tempeh-forever-1
+Tags: raspberrypi
+Summary: Welcome to my site! I'm a developer who loves Pelican, and this is my tiny summary
 
 ```js
 // Foo
@@ -19,14 +20,24 @@ ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory
 ```
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id odio non leo euismod consectetur. Suspendisse potenti. Mauris id auctor quam. Mauris quis augue vel sem euismod tempus in id justo. Phasellus ultrices velit vel tortor imperdiet, non molestie risus luctus. Nunc id malesuada nulla. In a felis fringilla tellus euismod tempus. Etiam viverra nisl fermentum libero consequat euismod. Fusce suscipit diam sed elementum ultrices. Morbi accumsan eu nisi quis convallis. Aenean vel dui sit amet augue fringilla cursus. Nullam vitae lobortis risus, in accumsan augue. Donec vitae aliquet turpis, cursus dignissim urna. Curabitur venenatis tristique orci, sodales viverra elit vestibulum quis. Nam et suscipit sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+Background
 
-Quisque vitae vestibulum diam. Duis at purus ultrices, volutpat lacus ac, eleifend tellus. Aliquam nulla libero, ultrices sed ex nec, dapibus tempus nunc. Ut consectetur blandit urna, at sodales tortor laoreet a. Nullam nec iaculis odio. Pellentesque eu auctor mi. Aliquam in quam vel risus rhoncus blandit. Proin in imperdiet velit. Ut vehicula justo in purus venenatis placerat. Phasellus bibendum nibh eu risus porta egestas.
+Recently, I have been thinking about the ecological and economic impact of getting our protein needs met from meat. I have personally landed in many places on the meat-eater to vegan spectrum at different times. Currently, I land about here: my issue with meat-eating is that animals do not actually produce protein, they just rearrange protein from the food they eat and form it into their own muscles and organs. The actual process of creating protein from nitrogen is performed by plants and bacteria. Then animals are not very efficient about generating meat from the protein they ingest. For example, a chicken will only turn about 60% of the protein it eats into protein available in its own body.
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam non lacus non purus molestie venenatis. Ut in varius nulla. Sed nec eros est. Duis mi est, euismod et quam et, congue sagittis metus. Morbi consequat pretium turpis, id sagittis leo aliquet porttitor. Morbi vitae libero non magna aliquet scelerisque ac nec augue. Sed sagittis laoreet tortor, ac euismod felis rhoncus porta. Pellentesque eros felis, varius quis bibendum id, consequat sit amet mi. Pellentesque vel velit odio. Nullam convallis, mi quis elementum commodo, augue tellus consequat turpis, vel fermentum urna lacus eget nulla. Maecenas nec tortor quis tellus pretium pharetra. Integer lobortis ipsum nec diam molestie, iaculis tincidunt sem tincidunt. Sed varius lacus sed velit ultrices, vitae iaculis augue mattis. Integer pulvinar lectus eget elit euismod, et gravida elit scelerisque. Maecenas pulvinar mauris non pulvinar vulputate.
+Raising meat livestock falls into two categories. In the first, grains like corn and soy are first grown in a field, and then fed to animals like chickens and pigs. All calories consumed by the animals had to first be grown industrially, and the land used for both the grain and the livestock is ecologically void. And from a resource flow perspective, the intermediate step of having to pass protein from a soybean through an animal before we eat it seems arbitrary and wasteful. This system is fueled by our demand for cheap meat, and I see no redeeming qualities.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce suscipit sed felis non tempor. Phasellus nulla libero, viverra ut malesuada sed, interdum at nunc. Morbi dapibus odio at molestie elementum. Sed eget eros dolor. Vestibulum suscipit ac est et tempor. Sed tempus condimentum purus ultricies pulvinar.
+In the second category, animals like cows, sheep or goats are grazed on semi-wild rangeland, and their manure is dilute enough to act as a fertilizer instead of a biohazard. This is a compelling model because it allows us to extract food from ecosystems that are not suitable for industrial agriculture, while hypothetically keeping the ecosystem largely intact. Hunting bison on the Great Plains, herding sheep in Mongolia, and fishing are all examples of this model. Ideally, we would get much more of our protein needs met from these systems. But in practice, private land ownership makes it prohibitively expensive to provide, say, grass-fed beef to any significant segment of the population.
 
-Etiam vehicula dapibus risus, vel congue urna vulputate scelerisque. In hac habitasse platea dictumst. Praesent gravida accumsan augue ac cursus. Etiam sodales blandit rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis at ipsum sit amet ligula condimentum dapibus. Duis eget elit libero. Vivamus suscipit libero eu enim posuere tincidunt. Donec vel augue nec magna dignissim cursus.
+Ok great, so meat production is morally bankrupt and/or economically infeasible, does that mean I am a vegan now? Maybe, but with the caveat that vegan diets often still rely heavily on industrial agriculture (and even emphasize particularly resource-intensive crops like almonds), which I would argue creates its own form of animal suffering through ecological destruction and exclusion. I still dream of a day where the human diet can once again be provided from an intact ecosystem, even if that would mean eating meat.
 
-Generated 5 paragraphs, 435 words, 2946 bytes of Lorem Ipsum
+In the meantime, let's talk about beans.
+
+Beans
+
+My doctor told me recently that I probably wasn't eating enough fiber, and that, in fact, almost nobody is. She recommended that I eat more beans. Beans are cheap, high in fiber, and also a good source of protein. Members of the bean family, Fabaceae, have a special structure on their roots called a root nodule that houses species of bacteria that can sequester nitrogen, the building block of protein. In many ways beans are the perfect food.
+
+But as much as I love a plate of rice and beans, if I am in any kind of a hurry it becomes much harder to get beans into my body. Where are the convenient bean snacks? Beans have been transformed into many shapes and textures. In Japan alone, beans are boiled into soymilk, curdled into tofu, fermented into natto, and aged into miso and soy sauce. But none of these really help me in my quest to get more beans into my body conveniently.
+
+Tempeh
+
+Tempeh is an Indonesian bean preparation where beans are partially cooked and then inoculated with spores of a species of Rhizopus mold. Over the course of several days, the mold fills the gaps between the soybeans and you are left with solid cubes. The tempeh can then be sauteed or fried, and then used in dishes as an approximate meat replacement. I am curious about relying more on tempeh as a source of protein in my own diet, but in general it is still treated as an exotic curiosity in the US. A half-pound of tempeh at my local grocery store is $5, putting it on par with if not above the cost per gram of protein as meat. If I want cheap tempeh, I guess I will have to make it myself!!
