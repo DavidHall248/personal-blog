@@ -1,4 +1,4 @@
-Title: Tempeh Forever: Part 1
+Title: Tempeh Forever: Prologue
 Date: 2024-07-01
 Slug: tempeh-forever-1
 Category: projects
