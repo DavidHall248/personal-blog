@@ -3,7 +3,7 @@ Date: 2024-07-01
 Slug: tempeh-forever-1
 Category: projects
 Tags: raspberrypi,fermentation
-Summary: Welcome to my site! I'm a developer who loves Pelican, and this is my tiny summary
+Summary: Recently I have been thinking...
 
 ####Background
 
