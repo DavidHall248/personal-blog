@@ -2,7 +2,7 @@ Title: Tempeh Forever
 Date: 2025-11-02
 Slug: tempeh-forever
 Category: projects
-Tags: raspberrypi,fermentation
+Tags: programming,python,raspberrypi,fermentation
 Summary:          
 
 ####Beans
@@ -11,14 +11,12 @@ I was told by my doctor recently to eat more beans. This is great advice, and be
 ####Tempeh
 I conceived of this project as a manic solution to multiple goals at once, and I imagined a system that would produce tempeh or other bean ferments in a relatively procedural and predictable way, and then give me a dataset that explained the progress. Here are the steps:
     
-1. A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...
-
-2. An MQTT broker that accepts information from the control device and uploads it to...
-
-3. An online SQL server for storage, which can then be queried with...
-
-4. A Python visualization.
-
+<ol>
+  <li>A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...</li>
+  <li>An MQTT broker that accepts information from the control device and uploads it to...</li>
+  <li>An online SQL server for storage, which can then be queried with...</li>
+  <li>A Python visualization.</li>
+</ol>
 
 ####Controller
 I used a pi pico 4W running a Micropython [script](https://github.com/DavidHall248/tempeh-forever/blob/main/main.py) as the incubator controller. It connects to a MAX31865 PT1000 temperature probe, which returns temperature over SPI. When the temperature is too low, a transistor drives a relay, which turns on the heating element, which is an old incandescent lightbulb. When the temperature hits the target, the heat relay turns off. When the temperature gets too high, a separate relay will turn on a fan that circulates air through incubator to cool it back down. A small OLED screen displays target temperature, actual temperature, and the status of wifi and MQTT. Two buttons next to the screen let me increase and decrease the target temperature. A third button lets me toggle MQTT transfer, in case I am debugging and don't want data uploaded.
@@ -41,13 +39,12 @@ The incubator controller is housed in an old tin I had. I connected the relays t
 
 I 3D printed several parts, mostly for aesthetics, and these include:
     
-- The plate for the OLED screen and buttons
-    
-- The bushing for the power cable and temperature probe to pass through
-    
-- The mount for the power outlets
-    
-- The cylinder that holds the cooling fan
+<ul>
+  <li>The plate for the OLED screen and buttons</li>
+  <li>The bushing for the power cable and temperature probe to pass through</li>
+  <li>The mount for the power outlets</li>
+  <li>The cylinder that holds the cooling fan</li>
+</ul>
 
 <img src="{static}/images/tempeh_outlet.png" alt="Tin Can" width="300">
 
