@@ -3,15 +3,20 @@ Date: 2025-11-02
 Slug: tempeh-forever
 Category: projects
 Tags: raspberrypi,fermentation
+Summary:          
 
 ####Beans
 I was told by my doctor recently to eat more beans. This is great advice, and beans have a special place in my heart. Because of their symbiotic relationship with nitrogen-fixing bacteria, no other plant family comes close to beans in terms of generating human bioavailable protein. Many enzymatic and microbial fermentation pathways have been invented by various cultures that improve the digestibility and flavor of beans. For example, tempeh is created when Rhizopus oligosporus is cultivated on soybeans (or another bean), and the result is beans with more flavor, more easily digestible protein, and fewer antinutrients. Tempeh can be used in place of meat in many recipes by just cutting it into the appropriate shape and frying it, and I have wanted to have a good source of tempeh in an effort to eat less meat. 
 
 ####Tempeh
 I conceived of this project as a manic solution to multiple goals at once, and I imagined a system that would produce tempeh or other bean ferments in a relatively procedural and predictable way, and then give me a dataset that explained the progress. Here are the steps:
+    
     1. A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...
+
     2. An MQTT broker that accepts information from the control device and uploads it to...
+
     3. An online SQL server for storage, which can then be queried with...
+
     4. A Python visualization.
 
 
@@ -35,9 +40,13 @@ Circuit in real life:
 The incubator controller is housed in an old tin I had. I connected the relays to a standard power outlet so my heating and cooling devices could be switched out if needed, and the screen is built into the lid. 
 
 I 3D printed several parts, mostly for aesthetics, and these include:
+    
     - The plate for the OLED screen and buttons
+    
     - The bushing for the power cable and temperature probe to pass through
+    
     - The mount for the power outlets
+    
     - The cylinder that holds the cooling fan
 
 <img src="{static}/images/tempeh_outlet.png" alt="Tin Can" width="300">
