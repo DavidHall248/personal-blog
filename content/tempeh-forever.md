@@ -9,10 +9,10 @@ I was told by my doctor recently to eat more beans. This is great advice, and be
 
 ####Tempeh
 I conceived of this project as a manic solution to multiple goals at once, and I imagined a system that would produce tempeh or other bean ferments in a relatively procedural and predictable way, and then give me a dataset that explained the progress. Here are the steps:
- 1. A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...
- 2. An MQTT broker that accepts information from the control device and uploads it to...
- 3. An online SQL server for storage, which can then be queried with...
- 4. A Python visualization.
+    1. A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...
+    2. An MQTT broker that accepts information from the control device and uploads it to...
+    3. An online SQL server for storage, which can then be queried with...
+    4. A Python visualization.
 
 
 ####The Controller
@@ -24,27 +24,27 @@ Screen:
 
 Diagram of the circuit:
 
-<img src="{static}/images/tempeh_circuit_diagram.png" alt="Circuit Diagram">
+<img src="{static}/images/tempeh_circuit_diagram.png" alt="Circuit Diagram" width="600">
 
 Circuit in real life:
 
-<img src="{static}/images/tempeh_incubator_wires.png" alt="Circuit IRL">
+<img src="{static}/images/tempeh_incubator_wires.png" alt="Circuit IRL" width="600">
 
 
 ####Assembly
 The incubator controller is housed in an old tin I had. I connected the relays to a standard power outlet so my heating and cooling devices could be switched out if needed, and the screen is built into the lid. 
 
 I 3D printed several parts, mostly for aesthetics, and these include:
- - The plate for the OLED screen and buttons
- - The bushing for the power cable and temperature probe to pass through
- - The mount for the power outlets
- - The cylinder that holds the cooling fan
+    - The plate for the OLED screen and buttons
+    - The bushing for the power cable and temperature probe to pass through
+    - The mount for the power outlets
+    - The cylinder that holds the cooling fan
 
 <img src="{static}/images/tempeh_outlet.png" alt="Tin Can" width="300">
 
 The box I am using for the incubator itself is an old Tupperware. The tray of beans rests on paracord I strung at mid-height. The tray is a stainless steel baking pan that I drilled a grid of holes into to improve airflow. I put the lightbulb at the bottom, then the tray, then I put the temperature probe on top of the tray, place the lid, place the fan column, and then wrap everything in towels and turn it on.
 
-<img src="{static}/images/tempeh_incubator.png" alt="Incubator" width="300">
+<img src="{static}/images/tempeh_incubator.png" alt="Incubator" width="600">
 
 ####MQTT
 MQTT is a lightweight messaging protocol often used in IoT devices that works via a system of topics and subscriptions. To send data, I am subscribing to three topics:
