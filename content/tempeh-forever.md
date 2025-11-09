@@ -5,42 +5,46 @@ Category: projects
 Tags: raspberrypi,fermentation
 
 ####Beans
-I was told by my doctor recently to eat more beans. This is great advice, and beans have a special place in my heart. Because of their symbiotic relationship with nitrogen-fixing bacteria, no other plant family comes close to beans in terms of generating human bioavailable protein. Many enzymatic and microbial fermentation pathways have been invented by various cultures that improve the digestibility and flavor of beans. For example, tempeh is created when Rhizopus oligosporus is cultivated on soybeans (or another bean), and the result is beans with more flavor, more easily digestible protein, and fewer antinutrients. Tempeh can replace meat in many recipes by just cutting it into the appropriate shape and frying it, and I have wanted to have a good source for tempeh in an effort to eat less meat. 
+I was told by my doctor recently to eat more beans. This is great advice, and beans have a special place in my heart. Because of their symbiotic relationship with nitrogen-fixing bacteria, no other plant family comes close to beans in terms of generating human bioavailable protein. Many enzymatic and microbial fermentation pathways have been invented by various cultures that improve the digestibility and flavor of beans. For example, tempeh is created when Rhizopus oligosporus is cultivated on soybeans (or another bean), and the result is beans with more flavor, more easily digestible protein, and fewer antinutrients. Tempeh can be used in place of meat in many recipes by just cutting it into the appropriate shape and frying it, and I have wanted to have a good source of tempeh in an effort to eat less meat. 
 
 ####Tempeh
 I conceived of this project as a manic solution to multiple goals at once, and I imagined a system that would produce tempeh or other bean ferments in a relatively procedural and predictable way, and then give me a dataset that explained the progress. Here are the steps:
-1. A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...
-2. An MQTT broker that accepts information from the control device and uploads it to...
-3. An online SQL server for storage, which can then be queried with...
-4. A Python visualization.
+ 1. A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...
+ 2. An MQTT broker that accepts information from the control device and uploads it to...
+ 3. An online SQL server for storage, which can then be queried with...
+ 4. A Python visualization.
+
 
 ####The Controller
 I used a pi pico 4W running a Micropython [script](https://github.com/DavidHall248/tempeh-forever/blob/main/main.py) as the incubator controller. It connects to a MAX31865 PT1000 temperature probe, which returns temperature over SPI. When the temperature is too low, a transistor drives a relay, which turns on the heating element, which is an old incandescent lightbulb. When the temperature hits the target, the heat relay turns off. When the temperature gets too high, a separate relay will turn on a fan that circulates air through incubator to cool it back down. A small OLED screen displays target temperature, actual temperature, and the status of wifi and MQTT. Two buttons next to the screen let me increase and decrease the target temperature. A third button lets me toggle MQTT transfer, in case I am debugging and don't want data uploaded.
 
 Screen:
-![Alt text]({static}/images/tempeh_screen.png)
+
+<img src="{static}/images/tempeh_screen.png" alt="Screen" width="300">
 
 Diagram of the circuit:
-![Alt text]({static}/images/tempeh_circuit_diagram.png)
+
+<img src="{static}/images/tempeh_circuit_diagram.png" alt="Circuit Diagram">
 
 Circuit in real life:
-![Alt text]({static}/images/tempeh_incubator_wires.png)
+
+<img src="{static}/images/tempeh_incubator_wires.png" alt="Circuit IRL">
 
 
 ####Assembly
 The incubator controller is housed in an old tin I had. I connected the relays to a standard power outlet so my heating and cooling devices could be switched out if needed, and the screen is built into the lid. 
 
 I 3D printed several parts, mostly for aesthetics, and these include:
--The plate for the OLED screen and buttons
--The bushing for the power cable and temperature probe to pass through
--The mount for the power outlets
--The cylinder that holds the cooling fan
+ - The plate for the OLED screen and buttons
+ - The bushing for the power cable and temperature probe to pass through
+ - The mount for the power outlets
+ - The cylinder that holds the cooling fan
 
-![Alt text]({static}/images/tempeh_outlet.png)
+<img src="{static}/images/tempeh_outlet.png" alt="Tin Can" width="300">
 
 The box I am using for the incubator itself is an old Tupperware. The tray of beans rests on paracord I strung at mid-height. The tray is a stainless steel baking pan that I drilled a grid of holes into to improve airflow. I put the lightbulb at the bottom, then the tray, then I put the temperature probe on top of the tray, place the lid, place the fan column, and then wrap everything in towels and turn it on.
 
-![Alt text]({static}/images/tempeh_incubator.png)
+<img src="{static}/images/tempeh_incubator.png" alt="Incubator" width="300">
 
 ####MQTT
 MQTT is a lightweight messaging protocol often used in IoT devices that works via a system of topics and subscriptions. To send data, I am subscribing to three topics:
@@ -56,7 +60,7 @@ Attempt 1: I soaked garbanzo beans for ~12 hours, and then tried to massage the 
 
 Attempt 2: This time I used 2 lb. of chana dal from an Indian market because it comes already hulled and split. I cooked them, without soaking, until they were slightly less than al dente, which was ~18 minutes. I let them cool and dry, then added 3 Tbsp. of tempeh starter. I put it in the tray, then sealed the tray with foil and poked holes in the foil for airflow. I put it in the incubator at 90 F. About 9 hours later, I notice the lightbulb has been on in the incubator for a very long time. The controller screen appears frozen, and I realize the controller has glitched and stopped running with the lightbulb on. When I restart the controller, it reads 140 degrees. I let it keep running overnight out of curiosity, even though 140 is definitely enough to kill the mold, and it looked like this in the morning:
 
-![Alt text]({static}/images/tempeh_fried.png)
+<img src="{static}/images/tempeh_fried.png" alt="Fried" width="300">
 
 A sample of the tempeh around the edges that had not been heat sterilized tasted fine, but I still didn't really consider it safe to eat.
 
@@ -64,30 +68,15 @@ Attempt 3: To avoid glitching, I added more error handling in the controller and
 
 Attempt 4: To improve airflow at the bottom of the pan I drilled a grid of holes into the baking sheet. To give the incubator a way to reduce heat, I added a cooling fan. I drilled holes in the bottom of the box, and added a fan column on top of the lid, which the fan sat on top of. I then rewired the controller and outlets to have a second relay that could toggle the fan independently of the heater. Then I edited the code to have a temperature maximum that would turn the fan on, and added an MQTT topic to record these events. When the temperature was under 90, the heat would turn on. When it was above 95, the fan would turn on. Then I repeated the process, and made what I would consider my first decent batch of tempeh:
 
-![Alt text]({static}/images/tempeh_success.png)
+<img src="{static}/images/tempeh_success.png" alt="Success!">
 
 ####Data Analysis
 
 The last step, and the reason I built so much data infrastructure, is that I wanted to see the usage of the relays over time. I've made incubators in the past, but they all used off-the-shelf temperature controllers that gave me no control over signaling. I wrote a [script](https://github.com/DavidHall248/tempeh-forever/blob/main/charts.py) that converts the on/off event data generated by the controller into timeseries data that shows the % of each hour a relay spent turned on. Then I plotted that against the temperature.
 
-![Alt text]({static}/images/tempeh_graph.png)
+<img src="{static}/images/tempeh_graph.png" alt="Graph">
 
-Great! We can clearly see how the tempeh needs additional heat in the beginning, then starts generating sufficient heat of its own, and finally needs to be cooled down by the fan.
+Great! We can clearly see how the tempeh needs additional heat in the beginning, then starts generating sufficient heat of its own, and finally needs to be cooled down by the fan. Success!
 
 ####Conclusion
 This was a long project that became way more complicated than I expected, but I'm happy that it's done and that the tempeh coming out of it is good quality. There are a few tweaks I will probably make, such as cooking the beans slightly longer and wrapping them in a muslin cloth to regulate humidity. There is also quite a bit of debate about the best temperature to incubate the tempeh mold at. I have been incubating at a safe middle ground of 90°F, but some people swear you can go as high as 97°F, and the colonization will be even more vigorous. I am hoping to also use this incubator to ferment other things, such as koji for miso/shoyu.
-
-
-
-
-
-
-Rhizopus oligosporus needs to be grown at around 95°F. The simple approach to achieving the right temperature is to use a temperature probe and heating element, and to turn on the heating element when the temperature is too low, and turn it off when it is too high. One issue with this is that heat often takes time to propagate through a space, so you can overshoot the temperature if you turn it off only when the correct temperature is detected. One solution is to use what is called a PID (proportional-integral-derivative) controller. These use an algorithm that estimate what effect on temperature having the heat element on for a given unit of time has, and they constantly self-adjust. For example, it could estimate that having the heating element on for 20 seconds increases the system temperature by one degree. Then when you need to increase the temperature, you know exactly how long to keep the heat on. These are the gold standard for high precision temperature control. For now, I'm going to completely ignore that and go with the simple approach.
-
-For my incubator, I am going to use a raspberry pi pico that is powering a temperature probe, an LCD screen, and a relay that controls the heating element.
-
-
-
-
-
-
