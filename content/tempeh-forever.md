@@ -11,13 +11,13 @@ I was told by my doctor recently to eat more beans. This is great advice, and be
 ####Tempeh
 I conceived of this project as a manic solution to multiple goals at once, and I imagined a system that would produce tempeh or other bean ferments in a relatively procedural and predictable way, and then give me a dataset that explained the progress. Here are the steps:
     
-    1. A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...
+1. A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...
 
-    2. An MQTT broker that accepts information from the control device and uploads it to...
+2. An MQTT broker that accepts information from the control device and uploads it to...
 
-    3. An online SQL server for storage, which can then be queried with...
+3. An online SQL server for storage, which can then be queried with...
 
-    4. A Python visualization.
+4. A Python visualization.
 
 
 ####Controller
@@ -41,13 +41,13 @@ The incubator controller is housed in an old tin I had. I connected the relays t
 
 I 3D printed several parts, mostly for aesthetics, and these include:
     
-    - The plate for the OLED screen and buttons
+- The plate for the OLED screen and buttons
     
-    - The bushing for the power cable and temperature probe to pass through
+- The bushing for the power cable and temperature probe to pass through
     
-    - The mount for the power outlets
+- The mount for the power outlets
     
-    - The cylinder that holds the cooling fan
+- The cylinder that holds the cooling fan
 
 <img src="{static}/images/tempeh_outlet.png" alt="Tin Can" width="300">
 
@@ -67,7 +67,7 @@ Data are sent from the pico to a separate raspberry pi that acts as an [MQTT bro
 
 Attempt 1: I soaked garbanzo beans for ~12 hours, and then tried to massage the hulls off because the tempeh mold can't penetrate hulls. I couldn't really get the hulls off and none of the methods mentioned online helped at all. So I made hummus!!
 
-Attempt 2: This time I used 2 lb. of chana dal from an Indian market because it comes already hulled and split. I cooked them, without soaking, until they were slightly less than al dente, which was ~18 minutes. I let them cool and dry, then added 3 Tbsp. of tempeh starter. I put it in the tray, then sealed the tray with foil and poked holes in the foil for airflow. I put it in the incubator at 90 F. About 9 hours later, I notice the lightbulb has been on in the incubator for a very long time. The controller screen appears frozen, and I realize the controller has glitched and stopped running with the lightbulb on. When I restart the controller, it reads 140 degrees. I let it keep running overnight out of curiosity, even though 140 is definitely enough to kill the mold, and it looked like this in the morning:
+Attempt 2: This time I used 2 lb. of chana dal from an Indian market because it comes already hulled and split. I cooked them, without soaking, until they were slightly less than al dente, which was ~18 minutes. I let them cool and dry, then added 3 Tbsp. of tempeh starter. I put it in the tray, then sealed the tray with foil and poked holes in the foil for airflow. I put it in the incubator at 90 F. About 9 hours later, I notice the lightbulb has been on in the incubator for a very long time. The controller screen appears frozen, and I realize the controller has glitched and stopped running with the lightbulb on. When I restart the controller, it reads 140 degrees. I let it keep running overnight out of curiosity, even though 140 is definitely enough to kill the mold, and it looked like this in the morning, with an obvious zone of heat death in the bottom right:
 
 <img src="{static}/images/tempeh_fried.png" alt="Fried" width="300">
 
