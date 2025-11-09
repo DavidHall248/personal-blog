@@ -24,9 +24,10 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
 LINKS = (
-    ("work", SITEURL+"/category/work.html"),
+#    ("programming", SITEURL+"/tag/programming"),
+#    ("textile", SITEURL+"/tag/textile"),
+#    ("work", SITEURL+"/category/work.html"),
     ("projects", SITEURL+"/category/projects.html"),
-#    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
 #    ("You can modify those links in your config file", "#"),
 )
 
