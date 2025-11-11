@@ -58,11 +58,7 @@ tempeh/events/heat - Messaged when the heat is toggled
 tempeh/events/fan - Messaged when the fan is toggled
 tempeh/measurements - Messaged every minute with current incubator temperature
 
-Data are sent from the pico to a separate raspberry pi that acts as an [MQTT broker](https://github.com/DavidHall248/tempeh-forever/blob/main/mqtt_broker.py). The pi has an e-ink display that lets me know data is flowing.
-
-<img src="{static}/images/tempeh_broker.png" alt="Broker" width="300">
-
-The data is read from the MQTT message, converted into a SQL INSERT query, and then sent to a Neon server where I have [created](https://github.com/DavidHall248/tempeh-forever/blob/main/create_tables.py) event and measurement tables. I had to use the MQTT broker because I couldn't find a reliable/compact SQL library for picos. 
+Data are sent from the pico to a separate raspberry pi that acts as an [MQTT broker](https://github.com/DavidHall248/tempeh-forever/blob/main/mqtt_broker.py). The data is read from the MQTT message, converted into a SQL INSERT query, and then sent to a Neon server where I have [created](https://github.com/DavidHall248/tempeh-forever/blob/main/create_tables.py) event and measurement tables. I had to use the MQTT broker because I couldn't find a reliable/compact SQL library for picos. 
 
 ####Everything At Once!!
 
@@ -79,10 +75,6 @@ Attempt 3: To avoid glitching, I added more error handling in the controller and
 Attempt 4: To improve airflow at the bottom of the pan I drilled a grid of holes into the baking sheet. To give the incubator a way to reduce heat, I added a cooling fan. I drilled holes in the bottom of the box, and added a fan column on top of the lid, which the fan sat on top of. I then rewired the controller and outlets to have a second relay that could toggle the fan independently of the heater. Then I edited the code to have a temperature maximum that would turn the fan on, and added an MQTT topic to record these events. When the temperature was under 90, the heat would turn on. When it was above 95, the fan would turn on. Then I repeated the process, and made what I would consider my first decent batch of tempeh:
 
 <img src="{static}/images/tempeh_success.png" alt="Success!">
-
-And here is a tempeh reuben I made with it:
-
-<img src="{static}/images/tempeh_reuben.png" alt="Reuben" width="300">
 
 ####Data
 
