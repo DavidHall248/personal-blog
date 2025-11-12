@@ -1,8 +1,8 @@
-Title: Tempeh Forever
+Title: Frame Bag
 Date: 2025-11-02
 Slug: bike-frame-bag
 Category: projects
-Tags: programming,python,raspberrypi,fermentation
+Tags: sewing,biking
 Summary:          
 
 ####Beans
