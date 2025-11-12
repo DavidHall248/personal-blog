@@ -60,7 +60,7 @@ tempeh/measurements - Messaged every minute with current incubator temperature
 
 Data are sent from the pico to a separate raspberry pi that acts as an [MQTT broker](https://github.com/DavidHall248/tempeh-forever/blob/main/mqtt_broker.py). The pi has an e-ink display that lets me know data is flowing.
 
-<img src="{static}/images/tempeh_broker.png" alt="Broker" width="300">
+<img src="{static}/images/tempeh_mqtt_broker.png" alt="Broker" width="300">
 
 The data is read from the MQTT message, converted into a SQL INSERT query, and then sent to a Neon server where I have [created](https://github.com/DavidHall248/tempeh-forever/blob/main/create_tables.py) event and measurement tables. I had to use the MQTT broker because I couldn't find a reliable/compact SQL library for picos. 
 
