@@ -32,10 +32,10 @@ I used a binding foot to finish the raw inside edges with what I'm pretty sure i
 
 <img src="{static}/images/bikeframe_piping.jpg" alt="Piping" width="300">
 
-And here is the complete bag!
+Here it is inside-out with all the edging complete. 
 
 <img src="{static}/images/bikeframe_complete.jpg" alt="Complete" width="300">
 
-And here it is on my bike!
+And here it is flipped and on my bike!
 
 <img src="{static}/images/bikeframe_onbike.jpg" alt="AllDone" width="300">
