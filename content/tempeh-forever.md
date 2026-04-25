@@ -6,10 +6,10 @@ Tags: programming,python,raspberrypi,fermentation
 Summary:          
 
 ####Beans
-I was told by my doctor recently to eat more beans. This is great advice, and beans have a special place in my heart. Because of their symbiotic relationship with nitrogen-fixing bacteria, no other plant family comes close to beans in terms of generating human bioavailable protein. Many enzymatic and microbial fermentation pathways have been invented by various cultures that improve the digestibility and flavor of beans. For example, tempeh is created when Rhizopus oligosporus is cultivated on soybeans (or another bean), and the result is beans with more flavor, more easily digestible protein, and fewer antinutrients. Tempeh can be used in place of meat in many recipes by just cutting it into the appropriate shape and frying it, and I have wanted to have a good source of tempeh in an effort to eat less meat. 
+Beans have a special place in my heart, and I have been trying to eat more of them. Because of their symbiotic relationship with nitrogen-fixing bacteria, no other plant family comes close to beans in terms of generating human bioavailable protein. Many enzymatic and microbial fermentation pathways are used by various cultures that improve the digestibility and flavor of beans. For example, tempeh is created when Rhizopus oligosporus is cultivated on soybeans (or another bean), and the result is beans with more flavor, more easily digestible protein, and fewer antinutrients. Tempeh can be used in place of meat in many recipes by just cutting it into the appropriate shape and frying it, and I have wanted to have a good source of tempeh in an effort to eat less meat. 
 
 ####Tempeh
-I conceived of this project as a manic solution to multiple goals at once, and I imagined a system that would produce tempeh or other bean ferments in a relatively procedural and predictable way, and then give me a dataset that explained the progress. Here are the steps:
+I conceived of this project as a solution to multiple goals at once, and I imagined a system that would produce tempeh or other bean ferments in a relatively procedural and predictable way, and then give me a dataset that explained the progress. Here are the steps:
     
 <ol>
   <li>A tempeh incubator with a temperature control device that would toggle a heating element to maintain the correct temperature. Data regarding the toggling of the element and also ongoing temperature/humidity information would flow to...</li>
