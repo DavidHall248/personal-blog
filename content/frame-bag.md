@@ -7,7 +7,7 @@ Summary:
 
 ####Bike Frame Bag
 
-I got bunch of random scraps of tech/outdoor fabrics at a fabric sale recently, and decided to make a frame bag for the inside of my bike's frame. 
+I bought a bunch of random scraps of tech/outdoor fabrics at a fabric sale recently, and decided to make a frame bag for the inside of my bike's frame. 
 
 The first step was to cut out a cardboard template that fit inside the frame.
 <img src="{static}/images/bikeframe_stencil.jpg" alt="Template" width="300">
