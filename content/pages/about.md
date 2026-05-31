@@ -1,4 +1,4 @@
-Title: About
+Title: 
 Date: 2024-07-01
 Slug: about
 
