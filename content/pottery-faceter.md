@@ -16,25 +16,25 @@ I have been making ceramic teapots at a local makerspace, and I like the look of
 
 ####Execution
 Using Fusion360, I started by making a copy of the banding wheel that I was trying to fit the faceter onto. Then I made a mount with a rounded lip that could sit right on the edge of the wheel. A screw hole in the center would let me attach the next piece.
-
+<br>
 <img src="{static}/images/slicer_banding.jpg" width="300">
 
 The next piece has a vertical track that lets the slicer track move up and down and also pivot the angle. It attaches to the mount via a horizontal track.
-
+<br>
 <img src="{static}/images/slicer_pivot.jpg" width="300">
 
 Each side of the vertical track will hold a piece, both of which then create the final track the actual wire will travel through.
-
+<br>
 <img src="{static}/images/slicer_track.jpg" width="300">
 
 The wire will be strung across a bow-shaped piece that has a handle to make it easier to direct.
-
+<br>
 <img src="{static}/images/slicer_slicer.jpg" width="300">
 
 Fully assembled, it looks like this:
-
+<br>
 <img src="{static}/images/slicer_fusion_assembled.jpg" width="300">
 
-I 3D printed it in PLA and this is the result:
-
+All the tracks and slots were designed to fit some small machine screws I bought. I 3D printed it in PLA and this is the result:
+<br>
 <img src="{static}/images/slicer_assembled.jpg" width="300">
