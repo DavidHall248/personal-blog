@@ -5,12 +5,10 @@ Category: projects
 Tags: sewing
 Summary:          
 
-####Concept
-
+####Concept<br>
 I bought a bunch of random scraps of tech/outdoor fabrics at a fabric sale recently, and decided to make a frame bag for the inside of my bike's frame. 
 
-####Process
-
+####Process<br>
 The first step was to cut out a cardboard template that fit inside the frame.
 <img src="{static}/images/bikeframe_bag/bikeframe_stencil.jpg" alt="Template" width="300">
 

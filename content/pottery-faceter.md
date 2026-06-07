@@ -39,6 +39,7 @@ All the tracks and slots were designed to fit some small machine screws I bought
 <br>
 <img src="{static}/images/pottery_faceter/slicer_assembled.jpg" width="300">
 
+For the wire I used some old steel wire with very tiny grub screw wire clamps from aliexpress on either end.
 
 I made a 7-sided polygon template to print out and place on the wheel and guide placement.
 PICTURE HERE
